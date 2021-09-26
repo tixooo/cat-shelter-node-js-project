@@ -1,0 +1,20 @@
+{
+  "name": "cat-shelter-node-js-project",
+  "version": "1.0.0",
+  "description": "Node js exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tixooo/cat-shelter-node-js-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tixooo/cat-shelter-node-js-project/issues"
+  },
+  "homepage": "https://github.com/tixooo/cat-shelter-node-js-project#readme"
+}
