@@ -1,11 +1,16 @@
 const express = require('express');
+const path = require('path')
 const app = express();
-app.all('/', (req, res)=>{
-    // res.writeHead(200, {
-    //     'Content-Type': 'text/plain'
-    // });
-    // res.write("Hello Js")
-    // res.end()
+const port = 5000;
+
+app.use(express.static(__dirname + '/content'))
+
+app.get('/', (req, res) => {
+
+    let addCat = path.resolve(__dirname, './Views/catShelter.html');
+    let addBreed = path.resolve(__dirname, './Views/addCat.html')
+    res.sendFile(addCat);
+    res.sendFile(addBreed);
 });
 
-app.listen(5000, console.log('Application is listening on port 5000') );
+app.listen(port, console.log(`Server runing on port ${port}...`));
