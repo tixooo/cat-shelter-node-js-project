@@ -10,7 +10,7 @@ app.use('/addCat', addCat);
 const addBreed = require('./exports/addBreedExport.js');
 app.use('/addBreed', addBreed)
 
-const CatShelter = require('./exports/catShelterExport');
-app.use('/', CatShelter);
+const home = require('./exports/homeExport');
+app.use('/', home)
 
 app.listen(port, console.log(`Server runing on port ${port}...`));

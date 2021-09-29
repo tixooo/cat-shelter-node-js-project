@@ -4,8 +4,8 @@ const path = require('path')
 const absolutePath = path.join(__dirname + '../../');
 
 app.get('/', (req, res) => {
-    let catShelter = path.resolve(absolutePath + '/Views/home/index.html');
-    res.sendFile(catShelter);
+    let home = path.resolve(absolutePath + '/Views/home/index.html');
+    res.sendFile(home);
 });
 
 module.exports = app;
