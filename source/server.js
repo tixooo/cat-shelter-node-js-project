@@ -6,8 +6,10 @@ const app = express();
 const port = 5000;
 
 //handlebars view engine set up
-app.engine('hbs', handlebars());
-app.set('view engine', 'hbs');
+app.engine('.hbs', handlebars({
+    extname: ".hbs"
+}));
+app.set('view engine', '.hbs');
 
 //Mongoose
 // const initDb = require('./dbConfig');
@@ -33,9 +35,9 @@ client.connect().then(() => {
 //css, picture and the home page are static
 app.use(express.static(__dirname + '/Public'));
 // app.use(express.static(__dirname + '/Views/home'));
-app.get('/', (req,res)=>{
-    res.render('home', { layout: false });
-})
+app.get('/', function (req,res){
+    res.render('home');
+});
 
 //import from exported differend pages
 const addCat = require('./exports/addCatExport');
