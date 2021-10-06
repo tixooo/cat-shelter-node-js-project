@@ -34,7 +34,7 @@ client.connect().then(() => {
 app.use(express.static(__dirname + '/Public'));
 // app.use(express.static(__dirname + '/Views/home'));
 app.get('/', (req,res)=>{
-    res.render('home');
+    res.render('home', { layout: false });
 })
 
 //import from exported differend pages
